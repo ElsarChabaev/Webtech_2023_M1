@@ -10,4 +10,8 @@ class IcomifyApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void ccontextLoads() {
+	}
+
 }
