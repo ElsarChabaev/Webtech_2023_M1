@@ -3,15 +3,19 @@ package Webtech2023.icomify.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+import java.util.List;
+import java.util.Map;
+
+@RestController
 public class HelloWorldController {
 
     @GetMapping(path = "/")
-    public ModelAndView showHelloWorldPage(){
+    public List<String> showHelloWorldPage(){
 
-        return new ModelAndView("helloWorld");
+        return List.of("Hello World");
     }
 
 }
