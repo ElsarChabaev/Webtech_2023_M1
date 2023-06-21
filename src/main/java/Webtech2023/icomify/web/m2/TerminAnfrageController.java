@@ -16,19 +16,19 @@ public class TerminAnfrageController {
 
     Logger logger = LoggerFactory.getLogger(TerminAnfrageController.class);
 
-    @PostMapping("/TerminAnfrage")
+    @PostMapping("/terminanfragen")
     public TerminAnfrage createTerminAnfrage(@RequestBody TerminAnfrage TerminAnfrage) {
         return service.save(TerminAnfrage);
     }
 
-    @GetMapping("/TerminAnfragen/{id}")
+    @GetMapping("/terminanfragen/{id}")
     public TerminAnfrage getTerminAnfrage(@PathVariable String id) {
         logger.info("GET request on route TerminAnfragen with {}", id);
         Long TerminAnfrageId = Long.parseLong(id);
         return service.get(TerminAnfrageId);
     }
 
-    @GetMapping("/TerminAnfragen")
+    @GetMapping("/terminanfragen")
     public List<TerminAnfrage> getAllTerminAnfragen() {
         return service.getAll();
     }

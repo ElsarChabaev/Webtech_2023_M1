@@ -18,17 +18,17 @@ import java.util.Objects;
         private String telNummer;
         private String emailAdresse;
        private String stadt;
-       private WochenTage verfügbarerWochentag;
+       private String woTag;
        private String kommentar;
 
 
-        public TerminAnfrage(String name, String nachname, String telNummer, String emailAdresse, String stadt, WochenTage verfügbarerWochentag, String kommentar) {
+        public TerminAnfrage(String name, String nachname, String telNummer, String emailAdresse, String stadt, String woTag, String kommentar) {
             this.name = name;
             this.nachname = nachname;
             this.telNummer = telNummer;
             this.emailAdresse = emailAdresse;
             this.stadt = stadt;
-            this.verfügbarerWochentag = verfügbarerWochentag;
+            this.woTag = woTag;
             this.kommentar = kommentar;
         }
 
@@ -41,12 +41,12 @@ import java.util.Objects;
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TerminAnfrage that = (TerminAnfrage) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(nachname, that.nachname) && Objects.equals(telNummer, that.telNummer) && Objects.equals(emailAdresse, that.emailAdresse) && Objects.equals(stadt, that.stadt) && verfügbarerWochentag == that.verfügbarerWochentag && Objects.equals(kommentar, that.kommentar);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(nachname, that.nachname) && Objects.equals(telNummer, that.telNummer) && Objects.equals(emailAdresse, that.emailAdresse) && Objects.equals(stadt, that.stadt) && Objects.equals(woTag, that.woTag) && Objects.equals(kommentar, that.kommentar);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, nachname, telNummer, emailAdresse, stadt, verfügbarerWochentag, kommentar);
+        return Objects.hash(id, name, nachname, telNummer, emailAdresse, stadt, woTag, kommentar);
     }
 
     @Override
@@ -58,7 +58,7 @@ import java.util.Objects;
                 ", telNummer='" + telNummer + '\'' +
                 ", emailAdresse='" + emailAdresse + '\'' +
                 ", stadt='" + stadt + '\'' +
-                ", verfügbarerWochentag=" + verfügbarerWochentag +
+                ", verfügbarerWochentag=" + woTag +
                 ", kommentar='" + kommentar + '\'' +
                 '}';
     }
@@ -111,12 +111,12 @@ import java.util.Objects;
             this.stadt = stadt;
         }
 
-        public WochenTage getVerfügbarerWochentag() {
-            return verfügbarerWochentag;
+        public String getWoTag() {
+            return woTag;
         }
 
-        public void setVerfügbarerWochentag(WochenTage verfügbarerWochentag) {
-            this.verfügbarerWochentag = verfügbarerWochentag;
+        public void setWoTag(String woTag) {
+            this.woTag = woTag;
         }
 
         public String getKommentar() {
