@@ -58,7 +58,7 @@ import java.util.Objects;
                 ", telNummer='" + telNummer + '\'' +
                 ", emailAdresse='" + emailAdresse + '\'' +
                 ", stadt='" + stadt + '\'' +
-                ", verfügbarerWochentag=" + woTag +
+                ", woTag=" + woTag +
                 ", kommentar='" + kommentar + '\'' +
                 '}';
     }
