@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:3000/",
+                .allowedOrigins("http://localhost:3001/",
                         "https://ElsarChabaev.github.io/icomify-frontend/");
     }
 }
