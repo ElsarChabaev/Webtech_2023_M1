@@ -22,6 +22,11 @@ import java.util.Objects;
        private String kommentar;
 
 
+    public String toStringTest() {
+        return "Thing{" + "id=" + id + ", name='" + name + ", price=" + telNummer + '}';
+    }
+
+
         public TerminAnfrage(String name, String nachname, String telNummer, String emailAdresse, String stadt, String woTag, String kommentar) {
             this.name = name;
             this.nachname = nachname;
