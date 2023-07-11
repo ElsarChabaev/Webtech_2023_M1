@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class TerminAnfrageTest {
+class TerminAnfrageTest {
 
     @Test
     void testToStringTest(){
@@ -19,6 +19,7 @@ public class TerminAnfrageTest {
         terminAnfrage.setId(42L);
 
         String expected = "TerminAnfrage{id=42, name='Max', telNummer='01729247005'}";
+
         String actual = terminAnfrage.toStringTest();
 
         assertEquals(expected, actual);
